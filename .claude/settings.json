@@ -1,0 +1,13 @@
+{
+  "hooks": [
+    {
+      "event": "Notification",
+      "matcher": "idle_prompt",
+      "command": "node .claude/.hooks/email-reminder.js start"
+    },
+    {
+      "event": "UserPromptSubmit",
+      "command": "node .claude/.hooks/email-reminder.js clear"
+    }
+  ]
+}
